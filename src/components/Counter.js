@@ -6,17 +6,16 @@ const Counter = ({tab, setTab}) => {
                 <div className='counter'>
                     {counter > 0 && 
                         <button 
-                        onClick={()=> {
-                            
-                            let newTab = [...tab]
-                            newTab[index] = newTab[index] -1 
-                            console.log(counter)
-                            setTab(newTab)
-                            // console.log(newTab)
-                            
-                        }}
-                    >-</button>
-                    }
+                            onClick={()=> {
+                                
+                                let newTab = [...tab]
+                                newTab[index] = newTab[index] -1 
+                                console.log(counter)
+                                setTab(newTab)
+                                // console.log(newTab)
+                                
+                            }}
+                    >-</button> }
     
                     <div className='display bg-purple color-white'>
                         {counter}
@@ -28,9 +27,7 @@ const Counter = ({tab, setTab}) => {
                         newTab[index] = newTab[index] +1 
                         setTab(newTab)
                    
-                }}>+</button>
-
-                    }
+                    }}>+</button> }
                     </div>
     
                     <button className='reset bg-purple color-white' onClick={()=> {
