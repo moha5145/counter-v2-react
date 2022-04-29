@@ -1,38 +1,90 @@
 .App {
   text-align: center;
+  height: 97vh;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+  height: 132px;
+  border-bottom: 1px solid #E5E5E5;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header .alarm {
+  padding: 0 80px;
+  font-size: 80px;
+  color: #5C48D3;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header h1 {
+  line-height: 132px;
+  font-size: 48px;
+  font-weight: 400;
+}
+.main-container {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: row; */
+}
+.main {
+  /* height: 50vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+.main .counter {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.add-counter {
+  width: 250px;
+  height: 70px;
+  border: none;
+  border-radius: 15px;
+  font-size: 32px;
+  font-weight: 600px;
+}
+
+.color-white {
   color: white;
+  
+}
+.bg-purple {
+  background-color: #5C48D3;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.counter button {
+  border: none;
+  background-color: white;
+  font-size: 100px;
+  height: 150px;
+  line-height: 150px;
+  margin: 20px;
+}
+.counter .display {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 15px;
+  font-size: 96px;
+  line-height: 150px;
+  font-weight: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main .reset {
+  border: none;
+  border-radius: 15px;
+  width: 150px;
+  height: 60px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+footer span {
+  font-weight: bold;
 }
