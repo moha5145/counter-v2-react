@@ -1,43 +1,52 @@
 const Counter = ({tab, setTab}) => {
-    return <div className='main'>
+    return <div className='counter-component'>
         {tab.map((counter, index) => {
     
             return (<div key={index}>
-                <div className='counter'>
+                <div className='btn-container'>
                     {counter > 0 && 
                         <button 
+                            className="minus-btn"
                             onClick={()=> {
                                 
                                 let newTab = [...tab]
                                 newTab[index] = newTab[index] -1 
                                 console.log(counter)
                                 setTab(newTab)
-                                // console.log(newTab)
                                 
                             }}
-                    >-</button> }
+                        >-</button> 
+                    }
     
-                    <div className='display bg-purple color-white'>
-                        {counter}
-                    </div>
+                    <div className="displaly-and-reset">
+                        <div className='display bg-purple color-white'>
+                            {counter}
+                        </div>
 
-                    {counter < 10 && <button onClick={()=> {
+                        <button className='reset bg-purple color-white' 
+                                    onClick={()=> {
+                                    let newTab = [...tab]
+                                    newTab[index] = newTab[index] = 0
+                                    setTab(newTab)
+                                }}
+        
+                        >reset</button>       
+                    </div>
+                    
+
+                    {counter < 10 && <button 
+                        className="plus-btn"
+                        onClick={()=> {
                         
                         let newTab = [...tab]
                         newTab[index] = newTab[index] +1 
                         setTab(newTab)
                    
-                    }}>+</button> }
-                    </div>
+                    }}>+</button>}
+                </div>
     
-                    <button className='reset bg-purple color-white' onClick={()=> {
-                        let newTab = [...tab]
-                        newTab[index] = newTab[index] = 0
-                         setTab(newTab)
-                    }}
-    
-                    >reset</button>
-                </div>)
+                    
+            </div>)
         })}
 
     

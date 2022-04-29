@@ -11,18 +11,19 @@ function App() {
   return (
     <div className="App">
       <Header />
-      { tab.length < 3 && 
-        <button className='add-counter bg-purple color-white' onClick={()=> {
-          const newTab = [...tab]
-          console.log('new tab', newTab)
-          newTab.push(0)
-          setTab(newTab)
-          }}>Add counter</button>
-      }
 
+      { tab.length < 3 && 
+        <button className='add-counter bg-purple color-white' 
+          onClick={()=> {
+            const newTab = [...tab]
+            console.log('new tab', newTab)
+            newTab.push(0)
+            setTab(newTab)
+            }}>Add counter
+        </button>
+      }
         
       <main className='main-container'>
-       
         <Counter tab={tab} setTab={setTab}/>
       </main>
       
