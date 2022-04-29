@@ -6,27 +6,31 @@ const Counter = ({tab, setTab}) => {
                 <div className='counter'>
                     <button 
                         onClick={()=> {
-                            for(let i = tab.length; i > 0; i--) {
-                                let newTab = [...tab]
-                                newTab[i] = newTab[i] - 1
-                                setTab(newTab)
-                                console.log(newTab)
-                            }
+                            
+                            let newTab = [...tab]
+                            newTab[index] = newTab[index] -1 
+                            console.log(newTab)
+                            setTab(newTab)
+                            // console.log(newTab)
+                            
                         }}
                     >-</button>
     
-    <div className='display bg-purple color-white'>{counter}</div>
+                    <div className='display bg-purple color-white'>
+                        {counter}
+                    </div>
+
                     <button onClick={()=> {
-                        for(let i = 0; i < tab.length; i++) {
+                        
                             let newTab = [...tab]
-                            newTab[i] = newTab[i] + 1
+                            newTab[index] = newTab[index] +1 
                             setTab(newTab)
-                        }
+                       
                     }}>+</button>
                     </div>
     
                     <button className='reset bg-purple color-white' onClick={()=> {
-                         setTab(0)
+                         setTab([0])
                     }}
     
                     >reset</button>
